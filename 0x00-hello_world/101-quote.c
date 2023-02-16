@@ -19,8 +19,4 @@ int main(void)
 
 	return (1);
 }
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
+
