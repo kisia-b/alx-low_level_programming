@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * puts_half prints half of the string
- * @str: character to check
- * Return 0 is success
+ * puts_half - prints half of a string
+ * @str: char to check
+ *
+ * Return: 0 is success
  */
 void puts_half(char *str)
 {
