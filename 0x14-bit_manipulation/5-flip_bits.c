@@ -1,12 +1,20 @@
-File Edit Options Buffers Tools C Help
-#include "main.h"
-int clear_bit(unsigned long int *n, unsigned int index)
-{
-unsigned long int x;
-if (index > (sizeof(unsigned long int) * 8 - 1))
-return (-1);
-x = ~(1 << index);
-*n = *n & x;
-        return (1);
-}
 
+#include "main.h"
+
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
+{
+	unsigned long int dif, res;
+	unsigned int y, x;
+
+	y = 0;
+	res = 1;
+	dif = n ^ m;
+	for (x = 0; x < (sizeof(unsigned long int) * 8); x++)
+	{
+		if (res == (dif & res))
+			y++;
+		res <<= 1;
+	}
+
+	return (y);
+}
